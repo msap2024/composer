@@ -30,7 +30,7 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 dag = DAG(
-     my_tutorial-v1.0.9', #update version whenever you change something
+    'my_tutorial-v1.0.9', #update version whenever you change something
     'tutorial',
     default_args=default_args,
     description='A simple tutorial DAG',
