@@ -9,7 +9,7 @@ steps:
   id: Deploy
   entrypoint: bash
   args: [ '-c', 'if [ "$BRANCH_NAME" == "develop" ]; then echo "$BRANCH_NAME" && gsutil -m rsync -r ./dags gs://${_COMPOSER_BUCKET}/dags; else echo "Working on $BRANCH_NAME"; fi']
-  tags: ['v1.01']
+  tags: ['v1.0.1']
 substitutions:
     _COMPOSER_BUCKET: us-central1-mycomposer-735af256-bucket
 options:
