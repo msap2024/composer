@@ -31,7 +31,6 @@ default_args = {
 }
 dag = DAG(
     'my_tutorial-v1.0.9', #update version whenever you change something
-    'tutorial',
     default_args=default_args,
     description='A simple tutorial DAG',
     schedule_interval=timedelta(days=1),
