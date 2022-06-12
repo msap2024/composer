@@ -8,7 +8,7 @@ steps:
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   id: Deploy
   entrypoint: bash
-  args: [ '-c', 'if [ "$TAG_NAME" == "develop" ]; then echo "$TAG_NAME" && gsutil -m rsync -r ./dags gs://${_COMPOSER_BUCKET}/dags; else echo "Working on $TAG_NAME"; fi']
+  args: [ '-c', 'if [ "$TAG_NAME" == "v1.0.1" ]; then echo "$TAG_NAME" && gsutil -m rsync -r ./dags gs://${_COMPOSER_BUCKET}/dags; else echo "Working on $TAG_NAME"; fi']
 tags: ['build','v1.0.1']
 substitutions:
     _COMPOSER_BUCKET: us-central1-mycomposer-735af256-bucket
